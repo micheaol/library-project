@@ -22,10 +22,22 @@ margin-bottom: 10px;
 }
 #logo img{
     width: 7vw;
-    margin-right: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 3px;
 }
 .menu-items{
     margin-right: 25px;
     margin-top: 25px;
+    
+}
+.menu-items a{
+    margin:15px;
+}
+.add-center img{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5vw;
 }
