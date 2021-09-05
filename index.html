@@ -30,9 +30,23 @@
    <main class="main-body">
           <!-- registration form -->
           <form action="">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+           <div class="title-div">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" placeholder="Book Title">
+           </div>
+           <div class="author-div">
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Author">
+           </div>
+            <div class="pages-div">
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" placeholder="Page number">
+            </div>
+            <div class="read-div">
+                <label for="read">Have you read it?</label>
+                <input type="checkbox" id="read">
+            </div>
+            <button type="submit" id="submit-btn">Add book</button>
         </form>
         <!-- registration form -->
    </main>
