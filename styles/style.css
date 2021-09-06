@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 .main-nav{
     display: flex;
     justify-content: space-between;
     background-color: brown;
+   
 }
 #logo{
     display: flex;
@@ -51,24 +55,53 @@ padding-bottom: 10px;
 }
 form input{
     width: 30vw;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
 }
 form .form-items{
     display: flex;
     flex-direction: column;
     margin:15px;
+    
 }
 form .read-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     width: 44vw;
     
 }
-form .read-div input{
-    align-self: flex-end;
-   
- 
+.display-books{
+    width: 100vw;
+    height: 85vh;
+    background-color: #d7a7c4;
 }
+
+.buttons-div{
+    display: grid;
+    margin-top: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-left: 25px;
+    
+    
+}
+.buttons-div button{
+    padding: 15px;
+    width: 13vw;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bf72a0;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+form h1{
+    display: flex;
+    justify-content: center;    
+}
+
 /* ==================styling for form ===============*/
 form{
     display: flex;
@@ -78,11 +111,14 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: chocolate;
-    margin-top: 50px;
-    width: 40vw;
+    /* background-color: #be6e9e; */
+    background-color: #c9b8c2;
+    margin-top: 70px;
+    width: 35vw;
     height: 65vh;
     padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 /* ================== End styling for form ===============*/
 
