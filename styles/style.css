@@ -92,7 +92,7 @@ form .read-div{
     grid-gap: 5px;
     margin-left: 25px;
 }
-.buttons-div button{
+.buttons-div button, #cancel-btn{
     padding: 15px;
     width: 13vw;
     border-radius: 10px;

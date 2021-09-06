@@ -5,6 +5,10 @@ const cancelBtn = document.querySelector('#cancel-btn');
 const removeBtns = document.querySelectorAll('#remove-btn');
 const bookCard = document.querySelector('.book');
 const form = document.querySelector('form');
+const bookTitle = document.querySelector('#title');
+const bookAuthor = document.querySelector('#author');
+const bookPages = document.querySelector('#pages');
+const isRead = document.querySelector('#read');
 
 
 
@@ -61,5 +65,8 @@ function removeBook(e) {
 // Submit form function:
 function submitForm(e) {
     e.preventDefault();
-   console.log(e)
+   console.log(bookAuthor.value);
+   console.log(bookTitle.value);
+   console.log(bookPages.value);
+   console.log(isRead.checked)
 }
