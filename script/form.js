@@ -12,6 +12,9 @@ const isRead = document.querySelector('#read');
 
 
 
+// Library array for the object:
+let myLabrary = [];
+
 // ============Create book object================:
 function Book(title, pages, author, isRead) {
     this.title = title;
@@ -26,7 +29,15 @@ function Book(title, pages, author, isRead) {
 // ============Create book object================:
 
 
+// TESTING ARRAY PUSH===============================
+let newBook = new Book("Holy Ghost", 200, "Michael", true);
+let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
+myLabrary.push(newBook);
+myLabrary.push(secondBook);
 
+console.log(myLabrary);
+console.log(secondBook.bookInfo())
+// TESTING ARRAY PUSH===============================
 
 // Add event listerner to the form:
 form.addEventListener('submit', submitForm);
