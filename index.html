@@ -15,8 +15,8 @@
                 <img src="./images/icon.png" alt="">
                 <p>The Library</p>
             </div>
-            <div class="add-center">
-                <a href="form.html">
+            <div class="add-book">
+                <a href="#">
                     <img src="./images/add.png" alt="">
                  </a>
                  <p>Add a book</p>
@@ -28,27 +28,36 @@
         </div>
     </nav>
    <main class="main-body">
+       <div class="display-books">
+           <div class="book">1</div>
+           <div class="book">2</div>
+           <div class="book">3</div>
+       </div>
           <!-- registration form -->
-          <form action="">
-           <div class="title-div">
-            <label for="title">Book Title</label>
-            <input type="text" id="title" placeholder="Book Title">
-           </div>
-           <div class="author-div">
-            <label for="author">Author</label>
-            <input type="text" id="author" placeholder="Author">
-           </div>
-            <div class="pages-div">
-                <label for="pages">Pages</label>
-                <input type="number" id="pages" placeholder="Page number">
-            </div>
-            <div class="read-div">
-                <label for="read">Have you read it?</label>
-                <input type="checkbox" id="read">
-            </div>
-            <button type="submit" id="submit-btn">Add book</button>
-        </form>
+         <div id="form-container">
+            <form action="">
+                <div class="title-div form-items">
+                 <label for="title">Book Title</label>
+                 <input type="text" id="title" placeholder="Book Title">
+                </div>
+                <div class="author-div form-items">
+                 <label for="author">Author</label>
+                 <input type="text" id="author" placeholder="Author">
+                </div>
+                 <div class="pages-div form-items">
+                     <label for="pages">Pages</label>
+                     <input type="number" id="pages" placeholder="Page number">
+                 </div>
+                 <div class="read-div form-items">
+                     <label for="read">Have you read it?</label>
+                     <input type="checkbox" id="read">
+                 </div>
+                 <button type="submit" id="submit-btn">Add book</button>
+                 <button type="submit" id="cancel-btn">Cancel</button>
+             </form>
+         </div>
         <!-- registration form -->
    </main>
+   <script src="./script/form.js"></script>
 </body>
 </html>
