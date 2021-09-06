@@ -8,7 +8,7 @@ const form = document.querySelector('form');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const bookPages = document.querySelector('#pages');
-let isRead = document.querySelector('#read');
+let isChecked = document.querySelector('#read');
 const displayBookBoard = document.querySelector('.display-books')
 
 
@@ -78,13 +78,13 @@ function removeBook(e) {
 function submitForm(e) {
     e.preventDefault();
     console.log(e)
-    let newBook = new Book(title, pages, author, isRead);
+    let newBook = new Book(title, pages, author, isChecked);
     
     newBook.title = bookTitle.value;
     newBook.pages = bookPages.value;
     newBook.author = bookAuthor.value;
-    newBook.isRead = isRead.checked;
-    console.log(newBook)
+    newBook.isChecked = isChecked.checked;
+    console.log(isChecked.checked)
     // bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked
     myLabrary.push(newBook);
     displayData();
@@ -102,7 +102,7 @@ function displayData() {
         title = book.title;
         author = book.author;
         pages = book.pages;
-        isRead = book.isRead;
+        isChecked = book.isRead;
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
         let titleDiv = document.createElement('div');
@@ -116,7 +116,7 @@ function displayData() {
         let bookDetailDiv = document.createElement('div');
         bookDetailDiv.id ="book-detail-div";
         let isReadPara = document.createElement('p');
-        isReadPara.textContent = `Have you read it? ${isRead}`;
+        isReadPara.textContent = `Have you read it? ${isChecked}`;
         let pagesPara = document.createElement('p');
         pagesPara.textContent = `Number of pages: ${pages}`;
         let removBtn = document.createElement('button');
