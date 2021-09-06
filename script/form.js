@@ -77,6 +77,7 @@ function clickForm(e) {
 // Remove book funtion:
 function removeBook(e) {
     e.target.parentNode.parentNode.remove();
+    console.log(e.target)
 }
 
 // ===========Function Grab Submit form data from UI and push data to the array of books:==========
@@ -84,7 +85,58 @@ function submitForm(e) {
     e.preventDefault();
     let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked);
     myLabrary.push(newBook);
-    console.log(myLabrary);
+    form.reset();
+    // console.log(myLabrary)
 }
 
 // ===========End of the Function Grab Submit form data from UI and push data to the array of books:=========
+
+//=================== Function to send my Library array to the UI================================//
+function displayData(array, title, author, pages, isRead) {
+        array = myLabrary;
+        title = newBook.title;
+        author = newBook.author;
+        pages = newBook.pages;
+        isRead = newBook.isRead;
+    for(let counter = 0; counter < myLabrary.length; counter++){
+        let bookDiv = document.createElement('div');
+        bookDiv.classList.add("book", "book-one");
+        let titleDiv = document.createElement('div');
+        titleDiv.id = "book-title";
+        let titleH2 = document.createElement('h3');
+        titleH2.textContent = title;
+        let para = document.createElement('p');
+        para.textContent = "Written by:";
+        let authorName = document.createElement('h3');
+        authorName.textContent = author;
+        let bookDetailDiv = document.createElement('div');
+        bookDetailDiv.id ="book-detail-div";
+        let isReadPara = document.createElement('p');
+        isReadPara.textContent = `Have you read it? ${isRead}`;
+        let pagesPara = document.createElement('p');
+        pagesPara.textContent = `Number of pages: ${pages}`;
+        let removBtn = document.createElement('button');
+        removBtn.type = "submit";
+        removBtn.id = 'remove-btn';
+        removBtn.textContent = "Remove book";
+
+        // Append children to first div
+        titleDiv.appendChild(titleH2);
+        titleDiv.appendChild(para);
+        titleDiv.appendChild(authorName);
+
+         //Append childre to the second children
+        bookDetailDiv.appendChild(isReadPara);
+        bookDetailDiv.appendChild(pagesPara);
+        bookDetailDiv.appendChild(removBtn);
+
+        // Append the divs to the parent div
+        bookDiv.appendChild(titleDiv);
+        bookDiv.appendChild(bookDetailDiv);
+
+        displayBookBoard.appendChild(bookDiv);
+        console.log(bookDiv)
+    }
+}
+displayData()
+//=================== Function to send my Library array to the UI================================//
