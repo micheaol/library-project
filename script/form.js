@@ -8,7 +8,7 @@ const form = document.querySelector('form');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const bookPages = document.querySelector('#pages');
-const isRead = document.querySelector('#read');
+let isRead = document.querySelector('#read');
 const displayBookBoard = document.querySelector('.display-books')
 
 
@@ -32,9 +32,9 @@ function Book(title, pages, author, isRead) {
 
 // TESTING ARRAY PUSH===============================
 let newBook = new Book("Holy Ghost", 200, "Michael", true);
-let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
+// let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
 myLabrary.push(newBook);
-myLabrary.push(secondBook);
+// myLabrary.push(secondBook);
 
 
 // console.log(secondBook.bookInfo())
@@ -54,12 +54,6 @@ window.addEventListener('click', clickForm);
 cancelBtn.addEventListener('click', closeForm);
 
 
-
-// Add function to display book on the page:
-function displayBook(book) {
-    
-}
-
 // Close form funtion:
 function closeForm(e) {
     if (e.target === cancelBtn) {
@@ -77,28 +71,38 @@ function clickForm(e) {
 // Remove book funtion:
 function removeBook(e) {
     e.target.parentNode.parentNode.remove();
-    console.log(e.target)
+    // console.log(e.target)
 }
 
 // ===========Function Grab Submit form data from UI and push data to the array of books:==========
 function submitForm(e) {
     e.preventDefault();
-    let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked);
+    console.log(e)
+    let newBook = new Book(title, pages, author, isRead);
+    
+    newBook.title = bookTitle.value;
+    newBook.pages = bookPages.value;
+    newBook.author = bookAuthor.value;
+    newBook.isRead = isRead.checked;
+    console.log(newBook)
+    // bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked
     myLabrary.push(newBook);
-    form.reset();
-    // console.log(myLabrary)
+    displayData();
+    // console.log(myLabrary);
+    return myLabrary
+    // form.reset();
 }
-
+// console.log(` Checking outside: ${myLabrary}`)
 // ===========End of the Function Grab Submit form data from UI and push data to the array of books:=========
 
 //=================== Function to send my Library array to the UI================================//
-function displayData(array, title, author, pages, isRead) {
-        array = myLabrary;
-        title = newBook.title;
-        author = newBook.author;
-        pages = newBook.pages;
-        isRead = newBook.isRead;
-    for(let counter = 0; counter < myLabrary.length; counter++){
+function displayData() {
+    // array = myLabrary;
+    myLabrary.forEach((book)=>{
+        title = book.title;
+        author = book.author;
+        pages = book.pages;
+        isRead = book.isRead;
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
         let titleDiv = document.createElement('div');
@@ -135,8 +139,8 @@ function displayData(array, title, author, pages, isRead) {
         bookDiv.appendChild(bookDetailDiv);
 
         displayBookBoard.appendChild(bookDiv);
-        console.log(bookDiv)
-    }
+    });
+        
 }
 displayData()
 //=================== Function to send my Library array to the UI================================//
