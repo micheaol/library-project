@@ -136,7 +136,7 @@ form{
 
 /* ==================styling for hide and display form when clicked ===============*/
 #form-container{
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
