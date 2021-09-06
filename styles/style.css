@@ -18,6 +18,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     color: cornsilk;
+    border-bottom: 2px solid black;
    
 }
 #logo{
