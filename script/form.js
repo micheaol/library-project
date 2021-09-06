@@ -9,6 +9,7 @@ const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const bookPages = document.querySelector('#pages');
 const isRead = document.querySelector('#read');
+const displayBookBoard = document.querySelector('.display-books')
 
 
 
@@ -35,8 +36,8 @@ let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
 myLabrary.push(newBook);
 myLabrary.push(secondBook);
 
-console.log(myLabrary);
-console.log(secondBook.bookInfo())
+
+// console.log(secondBook.bookInfo())
 // TESTING ARRAY PUSH===============================
 
 // Add event listerner to the form:
@@ -53,6 +54,11 @@ window.addEventListener('click', clickForm);
 cancelBtn.addEventListener('click', closeForm);
 
 
+
+// Add function to display book on the page:
+function displayBook(book) {
+    
+}
 
 // Close form funtion:
 function closeForm(e) {
@@ -73,11 +79,12 @@ function removeBook(e) {
     e.target.parentNode.parentNode.remove();
 }
 
-// Submit form function:
+// ===========Function Grab Submit form data from UI and push data to the array of books:==========
 function submitForm(e) {
     e.preventDefault();
-   console.log(bookAuthor.value);
-   console.log(bookTitle.value);
-   console.log(bookPages.value);
-   console.log(isRead.checked)
+    let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked);
+    myLabrary.push(newBook);
+    console.log(myLabrary);
 }
+
+// ===========End of the Function Grab Submit form data from UI and push data to the array of books:=========
