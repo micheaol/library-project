@@ -74,11 +74,9 @@ function submitForm(e) {
     newBook.pages = bookPages.value;
     newBook.author = bookAuthor.value;
     newBook.isChecked = isChecked.checked;
-    console.log(newBook.isChecked)
 
     
     myLabrary.push(newBook);
-    console.log(myLabrary.length);
     displayData();
     
 
