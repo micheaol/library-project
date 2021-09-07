@@ -108,7 +108,7 @@ form h1{
     display: flex;
     justify-content: center;    
 }
-.display-books h1{
+.library-head h1{
     display: flex;
     justify-content: center;
     margin-top: 10px;

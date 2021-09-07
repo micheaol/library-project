@@ -53,10 +53,12 @@ function closeForm(e) {
 // Function for clicking form:
 function clickForm(e) {
     displayBookBoard.innerHTML = "" // Clear the screen whenever you need to add more books
-
+    
     if (e.target === addBookBtn) {
         formContainer.style.display = 'block'
     }
+   
+
 }
 
 // Remove book funtion:
