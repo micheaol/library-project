@@ -29,17 +29,6 @@ function Book(title, pages, author, isRead) {
 
 // ============Create book object================:
 
-
-// TESTING ARRAY PUSH===============================
-// let newBook = new Book("Holy Ghost", 200, "Michael", true);
-// let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
-// myLabrary.push(newBook);
-// myLabrary.push(secondBook);
-
-
-// console.log(secondBook.bookInfo())
-// TESTING ARRAY PUSH===============================
-
 // Add event listerner to the form:
 form.addEventListener('submit', submitForm);
 
@@ -83,6 +72,7 @@ function submitForm(e) {
     newBook.pages = bookPages.value;
     newBook.author = bookAuthor.value;
     newBook.isChecked = isChecked.checked;
+    console.log(newBook.isChecked)
 
     
     myLabrary.push(newBook);
@@ -103,7 +93,7 @@ function displayData() {
         title = book.title;
         author = book.author;
         pages = book.pages;
-        isChecked = book.isChecked;
+        isChecked = book.isRead;
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
         let titleDiv = document.createElement('div');
@@ -117,8 +107,10 @@ function displayData() {
         let bookDetailDiv = document.createElement('div');
         bookDetailDiv.id ="book-detail-div";
         let isReadPara = document.createElement('p');
-        if (isChecked) {
+        if (isChecked.checked) {
             isReadPara.textContent = `Have you read it? Yes`;
+        }else{
+            isReadPara.textContent = `Have you read it? No`;
         }
         let pagesPara = document.createElement('p');
         pagesPara.textContent = `Number of pages: ${pages}`;
@@ -145,6 +137,7 @@ function displayData() {
 
         displayBookBoard.appendChild(bookDiv);
     });
+
 }
 displayData()
 //=================== Function to send my Library array to the UI================================//
