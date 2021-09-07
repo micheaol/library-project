@@ -2,14 +2,14 @@
 const formContainer = document.querySelector('#form-container');
 const addBookBtn = document.querySelector('.add-book img');
 const cancelBtn = document.querySelector('#cancel-btn');
-const removeBtns = document.querySelectorAll('#remove-btn');
+const removeBtns = document.querySelectorAll('#remove-btn'); //Id for removing the buttons
 const bookCard = document.querySelector('.book');
 const form = document.querySelector('form');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const bookPages = document.querySelector('#pages');
 let isChecked = document.querySelector('#read');
-const displayBookBoard = document.querySelector('.display-books')
+const displayBookBoard = document.querySelector('.display-books');
 
 
 
@@ -31,9 +31,9 @@ function Book(title, pages, author, isRead) {
 
 
 // TESTING ARRAY PUSH===============================
-let newBook = new Book("Holy Ghost", 200, "Michael", true);
+// let newBook = new Book("Holy Ghost", 200, "Michael", true);
 // let secondBook = new Book("Blood of Jesus", 200, "Oladele", false);
-myLabrary.push(newBook);
+// myLabrary.push(newBook);
 // myLabrary.push(secondBook);
 
 
@@ -71,43 +71,44 @@ function clickForm(e) {
 // Remove book funtion:
 function removeBook(e) {
     e.target.parentNode.parentNode.remove();
-    // console.log(e.target)
 }
 
 // ===========Function Grab Submit form data from UI and push data to the array of books:==========
 function submitForm(e) {
     e.preventDefault();
-    console.log(e)
-    let newBook = new Book(title, pages, author, isChecked);
     
+    let newBook = new Book(title, pages, bookAuthor, isChecked);
+   
     newBook.title = bookTitle.value;
     newBook.pages = bookPages.value;
     newBook.author = bookAuthor.value;
     newBook.isChecked = isChecked.checked;
-    console.log(isChecked.checked)
-    // bookTitle.value, bookPages.value, bookAuthor.value, isRead.checked
+
+    
     myLabrary.push(newBook);
     displayData();
-    // console.log(myLabrary);
-    return myLabrary
-    // form.reset();
+    
+
+    form.reset();
+    // return myLabrary
+    
 }
 // console.log(` Checking outside: ${myLabrary}`)
 // ===========End of the Function Grab Submit form data from UI and push data to the array of books:=========
 
 //=================== Function to send my Library array to the UI================================//
 function displayData() {
-    // array = myLabrary;
+    
     myLabrary.forEach((book)=>{
         title = book.title;
         author = book.author;
         pages = book.pages;
-        isChecked = book.isRead;
+        isChecked = book.isChecked;
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
         let titleDiv = document.createElement('div');
         titleDiv.id = "book-title";
-        let titleH2 = document.createElement('h3');
+        let titleH2 = document.createElement('h2');
         titleH2.textContent = title;
         let para = document.createElement('p');
         para.textContent = "Written by:";
@@ -116,13 +117,17 @@ function displayData() {
         let bookDetailDiv = document.createElement('div');
         bookDetailDiv.id ="book-detail-div";
         let isReadPara = document.createElement('p');
-        isReadPara.textContent = `Have you read it? ${isChecked}`;
+        if (isChecked) {
+            isReadPara.textContent = `Have you read it? Yes`;
+        }
         let pagesPara = document.createElement('p');
         pagesPara.textContent = `Number of pages: ${pages}`;
         let removBtn = document.createElement('button');
         removBtn.type = "submit";
-        removBtn.id = 'remove-btn';
+        removBtn.setAttribute('id', 'remove-btn');
+        removBtn.classList.add('remove-btn');
         removBtn.textContent = "Remove book";
+        removBtn.addEventListener('click', removeBook);
 
         // Append children to first div
         titleDiv.appendChild(titleH2);
@@ -140,7 +145,7 @@ function displayData() {
 
         displayBookBoard.appendChild(bookDiv);
     });
-        
 }
 displayData()
 //=================== Function to send my Library array to the UI================================//
+
