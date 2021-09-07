@@ -39,7 +39,7 @@ removeBtns.forEach((removeBtn)=>{
 });
 
 // add event listener to the window:
-window.addEventListener('click', clickForm);
+addBookBtn.addEventListener('click', clickForm);
 cancelBtn.addEventListener('click', closeForm);
 
 
@@ -52,6 +52,8 @@ function closeForm(e) {
 
 // Function for clicking form:
 function clickForm(e) {
+  
+
     if (e.target === addBookBtn) {
         formContainer.style.display = 'block'
     }
@@ -76,6 +78,7 @@ function submitForm(e) {
 
     
     myLabrary.push(newBook);
+    console.log(myLabrary.length);
     displayData();
     
 
@@ -88,12 +91,12 @@ function submitForm(e) {
 
 //=================== Function to send my Library array to the UI================================//
 function displayData() {
-    
     myLabrary.forEach((book)=>{
         title = book.title;
         author = book.author;
         pages = book.pages;
         isChecked = book.isRead;
+
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
         let titleDiv = document.createElement('div');
