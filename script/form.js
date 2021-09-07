@@ -10,6 +10,7 @@ const bookAuthor = document.querySelector('#author');
 const bookPages = document.querySelector('#pages');
 let isChecked = document.querySelector('#read');
 const displayBookBoard = document.querySelector('.display-books');
+const submitBtn = document.querySelector('#submit-btn');
 
 
 
@@ -27,10 +28,15 @@ function Book(title, pages, author, isRead) {
     }
 }
 
-// ============Create book object================:
+// ============End of book object================:
 
+// =======================================Event listeners=============================================
 // Add event listerner to the form:
 form.addEventListener('submit', submitForm);
+
+
+// Event of submit button to close form after it has been submitted
+submitBtn.addEventListener('click', closeForm);
 
 
 // Add event listener to the remove button:
@@ -40,17 +46,28 @@ removeBtns.forEach((removeBtn)=>{
 
 // add event listener to the window:
 addBookBtn.addEventListener('click', clickForm);
-cancelBtn.addEventListener('click', closeForm);
+submitBtn.addEventListener('click', closeSubmitted);
 
+// =======================================End of Event listeners=============================================
 
-// Close form funtion:
+// =======================================Functions=======================================================
+
+// Function to close form after it has been submitted:
+function closeSubmitted(e) {
+    if(e.target === submitBtn && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== ""){
+        formContainer.style.display = 'none'
+    }else{
+        displayData()
+    }
+}
+// ===========================Close form funtion:
 function closeForm(e) {
     if (e.target === cancelBtn) {
         formContainer.style.display = 'none'
     }
 }
 
-// Function for clicking form:
+// =========================Function for clicking form:
 function clickForm(e) {
     displayBookBoard.innerHTML = "" // Clear the screen whenever you need to add more books
     
@@ -61,7 +78,7 @@ function clickForm(e) {
 
 }
 
-// Remove book funtion:
+// ======================Remove book funtion:
 function removeBook(e) {
     e.target.parentNode.parentNode.remove();
 }
@@ -145,3 +162,4 @@ function displayData() {
 displayData()
 //=================== Function to send my Library array to the UI================================//
 
+// =======================================End of Functions=============================================
