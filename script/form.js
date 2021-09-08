@@ -90,25 +90,25 @@ function submitForm(e) {
     newBook.isRead = isChecked.checked;
 
     myLabrary.push(newBook);
+    // To send array to the local storage:
+    localStorage.setItem('localLibrary', JSON.stringify(myLabrary));
+
     displayData();
     
 
     form.reset();
-    // return myLabrary
-    
 }
-// console.log(` Checking outside: ${myLabrary}`)
-// ===========End of the Function Grab Submit form data from UI and push data to the array of books:=========
 
-//=================== Function to send my Library array to the UI================================//
+
+// LocalStorage test function:
+const getLocalLibrary = localStorage.getItem("localLibrary");
+if (getLocalLibrary && getLocalLibrary.length) {
+    const showLibrary = JSON.parse(getLocalLibrary);
+    console.log(showLibrary);
+}
+
 function displayData() {
     myLabrary.forEach((book)=>{
-        // const getMyLibraryFromLocal = localStorage.getItem('myLibrary');
-        // if (getMyLibraryFromLocal && getMyLibraryFromLocal.length) {
-        //     const myNewLibrary = JSON.parse(getMyLibraryFromLocal)
-        //     console.log(myNewLibrary)
-        // }
-        // Retrieve
         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
             let bookDiv = document.createElement('div');
             bookDiv.classList.add("book", "book-one");
