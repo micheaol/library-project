@@ -100,13 +100,13 @@ function submitForm(e) {
 }
 
 
-// LocalStorage test function:
-const getLocalLibrary = localStorage.getItem("localLibrary");
-if (getLocalLibrary && getLocalLibrary.length) {
-    const showLibrary = JSON.parse(getLocalLibrary);
-    console.log(showLibrary);
-}
-
+// // LocalStorage test function:======================================
+// const getLocalLibrary = localStorage.getItem("localLibrary");
+// if (getLocalLibrary && getLocalLibrary.length) {
+//     const showLibrary = JSON.parse(getLocalLibrary);
+//     console.log(showLibrary);
+// }
+===================================================================================
 function displayData() {
     myLabrary.forEach((book)=>{
         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
