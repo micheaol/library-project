@@ -106,7 +106,7 @@ function submitForm(e) {
 //     const showLibrary = JSON.parse(getLocalLibrary);
 //     console.log(showLibrary);
 // }
-===================================================================================
+// ===================================================================================
 function displayData() {
     myLabrary.forEach((book)=>{
         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
