@@ -35,6 +35,27 @@
     font-family: 'Noto Sans JP', sans-serif;
     
 }
+
+/* ==================styling for form ===============*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c9b8c2;
+    margin-top: 70px;
+    width: 35vw;
+    height: 75vh;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+/* ================== End styling for form ===============*/
+
 }
 
 @media screen and (max-width: 1096px) {
@@ -86,6 +107,25 @@
         font-size: 15px;
         
     }
+    /* ==================styling for form ===============*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c9b8c2;
+    margin-top: 70px;
+    width: 40vw;
+    height: 75vh;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+/* ================== End styling for form ===============*/
    }
 
    @media screen and (max-width: 948px) {
@@ -154,7 +194,50 @@
         font-size: 12px;
        
     }
-   }
+        /* ==================styling for form ===============*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c9b8c2;
+    margin-top: 70px;
+    width: 45vw;
+    height: 75vh;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+form input{
+    width: 35vw;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+form .read-div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 50vw;
+    
+}
+.buttons-div button, #cancel-btn{
+    padding: 10px;
+    width: 15vw;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bf72a0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+}
    @media screen and (max-width: 795px) {
     .book{
         background-color: cornsilk;
@@ -318,6 +401,24 @@
     .add-book p{
         margin-left: 45px;
     }
+    .buttons-div button, #cancel-btn{
+        padding: 10px;
+        width: 15vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 10.5px;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    form .read-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 52vw;
+    }
+    
    
    }
 
@@ -353,6 +454,7 @@
     .add-book p{
         margin-left: 45px;
     }
+
    
    }
    
@@ -371,7 +473,18 @@
         justify-content: space-between;
     }
   
-
+    .buttons-div button, #cancel-btn{
+        padding: 10px;
+        width: 10vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 11px;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
  
    
    }
@@ -475,6 +588,47 @@
         cursor: pointer;
         margin-bottom: 20px;
     }
+    .buttons-div button, #cancel-btn{
+        padding: 10px;
+        width: 30vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 10.5px;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: #be6e9e; */
+        background-color: #c9b8c2;
+        margin-top: 70px;
+        width: 85vw;
+        height: 85vh;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: 'Roboto', sans-serif;
+    }
+    form input{
+        width: 65vw;
+        padding: 15px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 10px;
+    }
+    form .read-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 84vw;
+        
+    }
    }
    @media screen and (max-width: 360px) {
     .menu-items #sign-up{
@@ -511,5 +665,45 @@
         font-size: 12px;
         
     }
+    .buttons-div button, #cancel-btn{
+        padding: 10px;
+        width: 30vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 10.5px;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: #be6e9e; */
+        background-color: #c9b8c2;
+        margin-top: 70px;
+        width: 85vw;
+        height: 85vh;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: 'Roboto', sans-serif;
+    }
+    form input{
+        width: 65vw;
+        padding: 15px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 10px;
+    }
+    form .read-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 84vw;
+        
+    }
    }
-  
