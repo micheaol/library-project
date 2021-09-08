@@ -1,0 +1,515 @@
+@media screen and (max-width: 1142px) {
+ /* ================Styling for each book added to the library======================= */
+.book #book-detail-div button{
+    padding: 2px;
+    margin-left: 20px;
+    width: 8vw;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bf72a0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+/* ================Styling for each book added to the library======================= */
+.book #book-title p{
+    margin: 5px;
+    margin-top: 2px;
+}
+.book #book-title{
+    width: 20vw;
+    background-color: darkblue;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+   
+}
+.book #book-detail-div{
+    border-radius: 8px;
+    padding: 3px;
+    background-color: cornsilk;
+    padding-right: 25px;
+    font-family: 'Noto Sans JP', sans-serif;
+    
+}
+}
+
+@media screen and (max-width: 1096px) {
+    /* ================Styling for each book added to the library======================= */
+   .book #book-detail-div button{
+       padding: 2px;
+       margin-left: 20px;
+       width: 8vw;
+       border-radius: 10px;
+       border: none;
+       font-family: 'Roboto', sans-serif;
+       background-color: #bf72a0;
+       font-size: 12px;
+       font-weight: bold;
+       cursor: pointer;
+       margin-bottom: 20px;
+   }
+   /* ================Styling for each book added to the library======================= */
+   .book #book-title p{
+       margin: 5px;
+       margin-top: 2px;
+   }
+   .book #book-title{
+       width: 20vw;
+       background-color: darkblue;
+       border-radius: 8px;
+       padding: 10px;
+       font-family: 'Noto Sans JP', sans-serif;
+       font-size: 14px;
+      
+   }
+   .book #book-detail-div{
+       border-radius: 8px;
+       padding: 3px;
+       background-color: cornsilk;
+       padding-right: 25px;
+       font-family: 'Noto Sans JP', sans-serif;
+       
+   }
+   }
+
+   @media screen and (max-width: 997px) {
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 15px;
+        
+    }
+   }
+
+   @media screen and (max-width: 948px) {
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 13px;
+        
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 10vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-title{
+        width: 20vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+   }
+
+   @media screen and (max-width: 846px) {
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+        
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 10vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-title{
+        width: 20vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+   }
+   @media screen and (max-width: 795px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 49vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 13px;
+        
+    }
+   }
+
+   @media screen and (max-width: 795px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 51vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 13px;
+        
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 12vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+   }
+
+   @media screen and (max-width: 632px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 55vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 13vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+   
+   }
+
+   @media screen and (max-width: 621px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 65vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 13vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-title{
+        width: 30vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+   
+   }
+   @media screen and (max-width: 583px) {
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 15vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-title{
+        width: 30vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+    .add-book img{
+        margin-top: 20px;
+        margin-left: 65px;
+        margin-right: auto;
+        width: 8vw;
+    }
+    .add-book p{
+        margin-left: 45px;
+    }
+   
+   }
+
+   @media screen and (max-width: 505px) {
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 17vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-title{
+        width: 30vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+    .add-book img{
+        margin-top: 20px;
+        margin-left: 65px;
+        margin-right: auto;
+        width: 8vw;
+    }
+    .add-book p{
+        margin-left: 45px;
+    }
+   
+   }
+   
+   @media screen and (max-width: 483px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 68vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+  
+
+ 
+   
+   }
+   @media screen and (max-width: 446px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 20vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .menu-items #sign-up{
+        display: none;
+    }
+   
+   }
+
+   @media screen and (max-width: 414px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-items #sign-up{
+        display: none;
+    }
+    .book #book-title{
+        width: 38vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+   }
+
+   @media screen and (max-width: 379px) {
+    .book{
+        background-color: cornsilk;
+        display: block;
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        height: 15vh;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-items #sign-up{
+        display: none;
+    }
+    .book #book-title{
+        width: 38vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 23vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+   }
+   @media screen and (max-width: 360px) {
+    .menu-items #sign-up{
+        display: none;
+    }
+    .book #book-title{
+        width: 38vw;
+        background-color: darkblue;
+        border-radius: 8px;
+        padding: 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+       
+    }
+    .book #book-detail-div button{
+        padding: 2px;
+        margin-left: 20px;
+        width: 25vw;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        background-color: #bf72a0;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .book #book-detail-div{
+        border-radius: 8px;
+        padding: 3px;
+        background-color: cornsilk;
+        padding-right: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+        
+    }
+   }
+  

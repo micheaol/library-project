@@ -92,6 +92,7 @@ form .read-div{
     grid-gap: 5px;
     margin-left: 25px;
 }
+/*=================== Styling for form button and cancel button=================== */
 .buttons-div button, #cancel-btn{
     padding: 15px;
     width: 13vw;
@@ -104,6 +105,7 @@ form .read-div{
     cursor: pointer;
     
 }
+/*=================== End of Styling for form buttons =================== */
 form h1{
     display: flex;
     justify-content: center;    
@@ -189,6 +191,7 @@ form{
 .book #book-detail-div p{
     margin: 5px;
 }
+/* ================Styling for each book added to the library======================= */
 .book #book-detail-div button{
     padding: 5px;
     margin-left: 20px;
@@ -202,3 +205,4 @@ form{
     cursor: pointer;
     margin-bottom: 20px;
 }
+/* ================Styling for each book added to the library======================= */
