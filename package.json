@@ -1,0 +1,23 @@
+{
+  "name": "library-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micheaol/library-project.git"
+  },
+  "keywords": [],
+  "author": "Michael Oladele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micheaol/library-project/issues"
+  },
+  "homepage": "https://github.com/micheaol/library-project#readme",
+  "dependencies": {
+    "firebase": "^9.0.1"
+  }
+}

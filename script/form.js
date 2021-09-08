@@ -1,3 +1,4 @@
+ 
 // Create variable for the form container:
 const formContainer = document.querySelector('#form-container');
 const addBookBtn = document.querySelector('.add-book img');
@@ -69,7 +70,6 @@ function closeForm(e) {
 // =========================Function for clicking form:
 function clickForm(e) {
    // displayBookBoard.innerHTML = "" // Clear the screen whenever you need to add more books
-    
     if (e.target === addBookBtn) {
         formContainer.style.display = 'block'
     }
@@ -88,24 +88,13 @@ function submitForm(e) {
     
     let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value);
     newBook.isRead = isChecked.checked;
-
     myLabrary.push(newBook);
-    localStorage.setItem('localLibrary', JSON.stringify(myLabrary));
     displayData();
     
 
     form.reset();
 }
 
-  // To send array to the local storage:
-
-
-// // LocalStorage test function:======================================
-// const getLocalLibrary = localStorage.getItem("localLibrary");
-// if (getLocalLibrary && getLocalLibrary.length) {
-//     const showLibrary = JSON.parse(getLocalLibrary);
-//     console.log(showLibrary);
-// }
 // ===================================================================================
 function displayData() {
     myLabrary.forEach((book)=>{
