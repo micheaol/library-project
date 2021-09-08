@@ -90,14 +90,14 @@ function submitForm(e) {
     newBook.isRead = isChecked.checked;
 
     myLabrary.push(newBook);
-    // To send array to the local storage:
     localStorage.setItem('localLibrary', JSON.stringify(myLabrary));
-
     displayData();
     
 
     form.reset();
 }
+
+  // To send array to the local storage:
 
 
 // // LocalStorage test function:======================================
