@@ -18,11 +18,11 @@ const submitBtn = document.querySelector('#submit-btn');
 let myLabrary = [];
 
 // ============Create book object================:
-function Book(title, pages, author, isRead) {
+function Book(title, pages, author) {
     this.title = title;
     this.pages = pages;
     this.author = author;
-    this.isRead = isRead;
+    this.isRead = true;
     this.bookInfo = function() {
         return  `${title}, ${author}, ${pages}, ${isRead}`
     }
@@ -36,7 +36,7 @@ form.addEventListener('submit', submitForm);
 
 
 // Event of submit button to close form after it has been submitted
-submitBtn.addEventListener('click', closeForm);
+cancelBtn.addEventListener('click', closeForm);
 
 
 // Add event listener to the remove button:
@@ -69,7 +69,7 @@ function closeForm(e) {
 
 // =========================Function for clicking form:
 function clickForm(e) {
-    displayBookBoard.innerHTML = "" // Clear the screen whenever you need to add more books
+   // displayBookBoard.innerHTML = "" // Clear the screen whenever you need to add more books
     
     if (e.target === addBookBtn) {
         formContainer.style.display = 'block'
@@ -87,14 +87,9 @@ function removeBook(e) {
 function submitForm(e) {
     e.preventDefault();
     
-    let newBook = new Book(title, pages, bookAuthor, isChecked);
-   
-    newBook.title = bookTitle.value;
-    newBook.pages = bookPages.value;
-    newBook.author = bookAuthor.value;
-    newBook.isChecked = isChecked.checked;
+    let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value);
+    newBook.isRead = isChecked.checked;
 
-    
     myLabrary.push(newBook);
     displayData();
     
@@ -109,58 +104,56 @@ function submitForm(e) {
 //=================== Function to send my Library array to the UI================================//
 function displayData() {
     myLabrary.forEach((book)=>{
-        title = book.title;
-        author = book.author;
-        pages = book.pages;
-        isChecked = book.isRead;
-        
+        if (myLabrary.indexOf(book) === myLabrary.length -1) {
+            let bookDiv = document.createElement('div');
+            bookDiv.classList.add("book", "book-one");
+            let titleDiv = document.createElement('div');
+            titleDiv.id = "book-title";
+            let titleH2 = document.createElement('h2');
+            titleH2.textContent = book.title;
+            let para = document.createElement('p');
+            para.textContent = "Written by:";
+            let authorName = document.createElement('h3');
+            authorName.textContent = book.author;
+            let bookDetailDiv = document.createElement('div');
+            bookDetailDiv.id ="book-detail-div";
+            let isReadPara = document.createElement('p');
+            if (book.isRead) {
+                isReadPara.textContent = `Have you read it? Yes`;
+            }else{
+                isReadPara.textContent = `Have you read it? No`;
+            }
+            let pagesPara = document.createElement('p');
+            pagesPara.textContent = `Number of pages: ${book.pages}`;
+            let removBtn = document.createElement('button');
+            removBtn.type = "submit";
+            removBtn.setAttribute('id', 'remove-btn');
+            removBtn.classList.add('remove-btn');
+            removBtn.textContent = "Remove book";
+            removBtn.addEventListener('click', removeBook);
+    
+            // Append children to first div
+            titleDiv.appendChild(titleH2);
+            titleDiv.appendChild(para);
+            titleDiv.appendChild(authorName);
+    
+             //Append childre to the second children
+            bookDetailDiv.appendChild(isReadPara);
+            bookDetailDiv.appendChild(pagesPara);
+            bookDetailDiv.appendChild(removBtn);
+    
+            // Append the divs to the parent div
+            bookDiv.appendChild(titleDiv);
+            bookDiv.appendChild(bookDetailDiv);
 
-        let bookDiv = document.createElement('div');
-        bookDiv.classList.add("book", "book-one");
-        let titleDiv = document.createElement('div');
-        titleDiv.id = "book-title";
-        let titleH2 = document.createElement('h2');
-        titleH2.textContent = title;
-        let para = document.createElement('p');
-        para.textContent = "Written by:";
-        let authorName = document.createElement('h3');
-        authorName.textContent = author;
-        let bookDetailDiv = document.createElement('div');
-        bookDetailDiv.id ="book-detail-div";
-        let isReadPara = document.createElement('p');
-        if (book.isRead.checked) {
-            isReadPara.textContent = `Have you read it? Yes`;
-        }else{
-            isReadPara.textContent = `Have you read it? No`;
+            displayBookBoard.appendChild(bookDiv);
         }
-        let pagesPara = document.createElement('p');
-        pagesPara.textContent = `Number of pages: ${pages}`;
-        let removBtn = document.createElement('button');
-        removBtn.type = "submit";
-        removBtn.setAttribute('id', 'remove-btn');
-        removBtn.classList.add('remove-btn');
-        removBtn.textContent = "Remove book";
-        removBtn.addEventListener('click', removeBook);
-
-        // Append children to first div
-        titleDiv.appendChild(titleH2);
-        titleDiv.appendChild(para);
-        titleDiv.appendChild(authorName);
-
-         //Append childre to the second children
-        bookDetailDiv.appendChild(isReadPara);
-        bookDetailDiv.appendChild(pagesPara);
-        bookDetailDiv.appendChild(removBtn);
-
-        // Append the divs to the parent div
-        bookDiv.appendChild(titleDiv);
-        bookDiv.appendChild(bookDetailDiv);
-
-        displayBookBoard.appendChild(bookDiv);
+        
+       
     });
 
 }
-displayData()
+// displayData()
 //=================== Function to send my Library array to the UI================================//
 
 // =======================================End of Functions=============================================
