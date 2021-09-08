@@ -113,6 +113,7 @@ function displayData() {
         author = book.author;
         pages = book.pages;
         isChecked = book.isRead;
+        
 
         let bookDiv = document.createElement('div');
         bookDiv.classList.add("book", "book-one");
@@ -127,7 +128,7 @@ function displayData() {
         let bookDetailDiv = document.createElement('div');
         bookDetailDiv.id ="book-detail-div";
         let isReadPara = document.createElement('p');
-        if (isChecked.checked) {
+        if (book.isRead.checked) {
             isReadPara.textContent = `Have you read it? Yes`;
         }else{
             isReadPara.textContent = `Have you read it? No`;
