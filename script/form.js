@@ -49,7 +49,6 @@ addBookBtn.addEventListener('click', clickForm);
 submitBtn.addEventListener('click', closeSubmitted);
 
 // =======================================End of Event listeners=============================================
-
 // =======================================Functions=======================================================
 
 // Function to close form after it has been submitted:
@@ -104,7 +103,13 @@ function submitForm(e) {
 //=================== Function to send my Library array to the UI================================//
 function displayData() {
     myLabrary.forEach((book)=>{
-        if (myLabrary.indexOf(book) === myLabrary.length -1) {
+        // const getMyLibraryFromLocal = localStorage.getItem('myLibrary');
+        // if (getMyLibraryFromLocal && getMyLibraryFromLocal.length) {
+        //     const myNewLibrary = JSON.parse(getMyLibraryFromLocal)
+        //     console.log(myNewLibrary)
+        // }
+        // Retrieve
+        if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
             let bookDiv = document.createElement('div');
             bookDiv.classList.add("book", "book-one");
             let titleDiv = document.createElement('div');
