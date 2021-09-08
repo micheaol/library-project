@@ -146,7 +146,7 @@ function displayData() {
             bookDiv.appendChild(titleDiv);
             bookDiv.appendChild(bookDetailDiv);
 
-            displayBookBoard.appendChild(bookDiv);
+            displayBookBoard.prepend(bookDiv);
         }
         
        
