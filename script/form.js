@@ -1,4 +1,3 @@
- 
 // Create variable for the form container:
 const formContainer = document.querySelector('#form-container');
 const addBookBtn = document.querySelector('.add-book img');
