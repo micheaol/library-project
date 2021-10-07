@@ -77,9 +77,7 @@ function clickForm(e) {
 }
 
 // ======================Remove book funtion:
-function removeBook(e) {
-    e.target.parentNode.parentNode.remove();
-}
+
 
 // ===========Function Grab Submit form data from UI and push data to the array of books:==========
 function submitForm(e) {
@@ -90,22 +88,33 @@ function submitForm(e) {
     myLabrary.push(newBook);
     saveBookToLocal(bookTitle.value);
     // displayData();
-    
-
+    remoFromLocal();
     form.reset();
 }
 
-let key = bookTitle.value;
 // ===================================Save data to local storage ==============================
 function saveBookToLocal() {
+    const key = document.querySelector('#key').value;
     localStorage.setItem(key, JSON.stringify(myLabrary));
     
+}
+
+
+
+function removeBook(e) {
+    // e.target.parentNode.parentNode.remove();
+    console.log(e.target.parentNode)
+    const key = document.querySelector('#key').value;
+    localStorage.removeItem(key);
+    
+
 }
 
 //============Function to get infomation from local storage and load it to 
 // ===============the UI
 function getBookFromLocal() {
     for(key in localStorage){
+        // const key = document.querySelector('#test-key').value;
         const dataFromLocal = JSON.parse(localStorage.getItem(key));
         if(dataFromLocal){
             dataFromLocal.forEach(book => {
@@ -158,63 +167,11 @@ function getBookFromLocal() {
     }
 }
 
-
-// function displayData() {
-    
-//     bookFromLocal.forEach((book)=>{
-//         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
-//             let bookDiv = document.createElement('div');
-//             bookDiv.classList.add("book", "book-one");
-//             let titleDiv = document.createElement('div');
-//             titleDiv.id = "book-title";
-//             let titleH2 = document.createElement('h2');
-//             titleH2.textContent = book.title;
-//             let para = document.createElement('p');
-//             para.textContent = "Written by:";
-//             let authorName = document.createElement('h3');
-//             authorName.textContent = book.author;
-//             let bookDetailDiv = document.createElement('div');
-//             bookDetailDiv.id ="book-detail-div";
-//             let isReadPara = document.createElement('p');
-//             if (book.isRead) {
-//                 isReadPara.textContent = `Have you read it? Yes`;
-//             }else{
-//                 isReadPara.textContent = `Have you read it? No`;
-//             }
-//             let pagesPara = document.createElement('p');
-//             pagesPara.textContent = `Number of pages: ${book.pages}`;
-//             let removBtn = document.createElement('button');
-//             removBtn.type = "submit";
-//             removBtn.setAttribute('id', 'remove-btn');
-//             removBtn.classList.add('remove-btn');
-//             removBtn.textContent = "Remove book";
-//             removBtn.addEventListener('click', removeBook);
-    
-            // Append children to first div
-            // titleDiv.appendChild(titleH2);
-            // titleDiv.appendChild(para);
-            // titleDiv.appendChild(authorName);
-    
-             //Append childre to the second children
-            // bookDetailDiv.appendChild(isReadPara);
-            // bookDetailDiv.appendChild(pagesPara);
-            // bookDetailDiv.appendChild(removBtn);
-    
-            // Append the divs to the parent div
-//             bookDiv.appendChild(titleDiv);
-//             bookDiv.appendChild(bookDetailDiv);
-
-//             displayBookBoard.prepend(bookDiv);
-//         }
-        
-       
-//     });
-    
-
-// }
+function remoFromLocal() {
+        const key = document.querySelector('#key').value;
+        console.log(localStorage.removeItem(key));
+}
 
 getBookFromLocal()
-// displayData()
-//=================== Function to send my Library array to the UI================================//
 
 // =======================================End of Functions=============================================
