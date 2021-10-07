@@ -88,13 +88,19 @@ function submitForm(e) {
     let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value);
     newBook.isRead = isChecked.checked;
     myLabrary.push(newBook);
+    saveBookToLocal();
     displayData();
     
 
     form.reset();
 }
 
-// ===================================================================================
+// ===================================Save data to local storage ==============================
+function saveBookToLocal() {
+    localStorage.setItem('library', JSON.stringify(myLabrary));
+}
+
+
 function displayData() {
     myLabrary.forEach((book)=>{
         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
