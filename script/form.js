@@ -88,70 +88,132 @@ function submitForm(e) {
     let newBook = new Book(bookTitle.value, bookPages.value, bookAuthor.value);
     newBook.isRead = isChecked.checked;
     myLabrary.push(newBook);
-    saveBookToLocal();
-    displayData();
+    saveBookToLocal(bookTitle.value);
+    // displayData();
     
 
     form.reset();
 }
 
+let key = bookTitle.value;
 // ===================================Save data to local storage ==============================
 function saveBookToLocal() {
-    localStorage.setItem('library', JSON.stringify(myLabrary));
+    localStorage.setItem(key, JSON.stringify(myLabrary));
+    
+}
+
+//============Function to get infomation from local storage and load it to 
+// ===============the UI
+function getBookFromLocal() {
+    for(key in localStorage){
+        const dataFromLocal = JSON.parse(localStorage.getItem(key));
+        if(dataFromLocal){
+            dataFromLocal.forEach(book => {
+             let bookDiv = document.createElement('div');
+             bookDiv.classList.add("book", "book-one");
+             let titleDiv = document.createElement('div');
+             titleDiv.id = "book-title";
+             let titleH2 = document.createElement('h2');
+             titleH2.textContent = book.title;
+             let para = document.createElement('p');
+             para.textContent = "Written by:";
+             let authorName = document.createElement('h3');
+             authorName.textContent = book.author;
+             let bookDetailDiv = document.createElement('div');
+             bookDetailDiv.id ="book-detail-div";
+             let isReadPara = document.createElement('p');
+             if (book.isRead) {
+                 isReadPara.textContent = `Have you read it? Yes`;
+             }else{
+                 isReadPara.textContent = `Have you read it? No`;
+             }
+             let pagesPara = document.createElement('p');
+             pagesPara.textContent = `Number of pages: ${book.pages}`;
+             let removBtn = document.createElement('button');
+             removBtn.type = "submit";
+             removBtn.setAttribute('id', 'remove-btn');
+             removBtn.classList.add('remove-btn');
+             removBtn.textContent = "Remove book";
+             removBtn.addEventListener('click', removeBook);
+     
+             // Append children to first div
+             titleDiv.appendChild(titleH2);
+             titleDiv.appendChild(para);
+             titleDiv.appendChild(authorName);
+     
+              //Append childre to the second children
+             bookDetailDiv.appendChild(isReadPara);
+             bookDetailDiv.appendChild(pagesPara);
+             bookDetailDiv.appendChild(removBtn);
+     
+             // Append the divs to the parent div
+             bookDiv.appendChild(titleDiv);
+             bookDiv.appendChild(bookDetailDiv);
+     
+             displayBookBoard.prepend(bookDiv);
+            });
+    }
+    
+    
+    }
 }
 
 
-function displayData() {
-    myLabrary.forEach((book)=>{
-        if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
-            let bookDiv = document.createElement('div');
-            bookDiv.classList.add("book", "book-one");
-            let titleDiv = document.createElement('div');
-            titleDiv.id = "book-title";
-            let titleH2 = document.createElement('h2');
-            titleH2.textContent = book.title;
-            let para = document.createElement('p');
-            para.textContent = "Written by:";
-            let authorName = document.createElement('h3');
-            authorName.textContent = book.author;
-            let bookDetailDiv = document.createElement('div');
-            bookDetailDiv.id ="book-detail-div";
-            let isReadPara = document.createElement('p');
-            if (book.isRead) {
-                isReadPara.textContent = `Have you read it? Yes`;
-            }else{
-                isReadPara.textContent = `Have you read it? No`;
-            }
-            let pagesPara = document.createElement('p');
-            pagesPara.textContent = `Number of pages: ${book.pages}`;
-            let removBtn = document.createElement('button');
-            removBtn.type = "submit";
-            removBtn.setAttribute('id', 'remove-btn');
-            removBtn.classList.add('remove-btn');
-            removBtn.textContent = "Remove book";
-            removBtn.addEventListener('click', removeBook);
+// function displayData() {
+    
+//     bookFromLocal.forEach((book)=>{
+//         if (myLabrary.indexOf(book) === myLabrary.length -1 && bookTitle.value !== "" && bookAuthor.value !== "" && pages.value !== "") {
+//             let bookDiv = document.createElement('div');
+//             bookDiv.classList.add("book", "book-one");
+//             let titleDiv = document.createElement('div');
+//             titleDiv.id = "book-title";
+//             let titleH2 = document.createElement('h2');
+//             titleH2.textContent = book.title;
+//             let para = document.createElement('p');
+//             para.textContent = "Written by:";
+//             let authorName = document.createElement('h3');
+//             authorName.textContent = book.author;
+//             let bookDetailDiv = document.createElement('div');
+//             bookDetailDiv.id ="book-detail-div";
+//             let isReadPara = document.createElement('p');
+//             if (book.isRead) {
+//                 isReadPara.textContent = `Have you read it? Yes`;
+//             }else{
+//                 isReadPara.textContent = `Have you read it? No`;
+//             }
+//             let pagesPara = document.createElement('p');
+//             pagesPara.textContent = `Number of pages: ${book.pages}`;
+//             let removBtn = document.createElement('button');
+//             removBtn.type = "submit";
+//             removBtn.setAttribute('id', 'remove-btn');
+//             removBtn.classList.add('remove-btn');
+//             removBtn.textContent = "Remove book";
+//             removBtn.addEventListener('click', removeBook);
     
             // Append children to first div
-            titleDiv.appendChild(titleH2);
-            titleDiv.appendChild(para);
-            titleDiv.appendChild(authorName);
+            // titleDiv.appendChild(titleH2);
+            // titleDiv.appendChild(para);
+            // titleDiv.appendChild(authorName);
     
              //Append childre to the second children
-            bookDetailDiv.appendChild(isReadPara);
-            bookDetailDiv.appendChild(pagesPara);
-            bookDetailDiv.appendChild(removBtn);
+            // bookDetailDiv.appendChild(isReadPara);
+            // bookDetailDiv.appendChild(pagesPara);
+            // bookDetailDiv.appendChild(removBtn);
     
             // Append the divs to the parent div
-            bookDiv.appendChild(titleDiv);
-            bookDiv.appendChild(bookDetailDiv);
+//             bookDiv.appendChild(titleDiv);
+//             bookDiv.appendChild(bookDetailDiv);
 
-            displayBookBoard.prepend(bookDiv);
-        }
+//             displayBookBoard.prepend(bookDiv);
+//         }
         
        
-    });
+//     });
+    
 
-}
+// }
+
+getBookFromLocal()
 // displayData()
 //=================== Function to send my Library array to the UI================================//
 
