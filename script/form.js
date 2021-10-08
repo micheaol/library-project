@@ -11,6 +11,11 @@ const bookPages = document.querySelector('#pages');
 let isChecked = document.querySelector('#read');
 const displayBookBoard = document.querySelector('.display-books');
 const submitBtn = document.querySelector('#submit-btn');
+const removeBookFormDiv = document.querySelector('#remove-form-container');
+const removeBookBtn = document.querySelector('#remove-book-btn');
+const removeKey = document.querySelector('#remove-key');
+const removeBookInnerForm = document.querySelector('#remove-book-form');
+const closeBookFormBtn = document.querySelector('#close-book-btn')
 
 
 
@@ -41,13 +46,18 @@ cancelBtn.addEventListener('click', closeForm);
 
 // Add event listener to the remove button:
 removeBtns.forEach((removeBtn)=>{
-    removeBtn.addEventListener('click', removeBook);
+    removeBtn.addEventListener('click', removeBookForm);
 });
 
 // add event listener to the window:
 addBookBtn.addEventListener('click', clickForm);
 submitBtn.addEventListener('click', closeSubmitted);
 
+//Event to remove book from local storage:
+removeBookBtn.addEventListener('click', removeBookFromLocal);
+
+//Event to close remove book form:
+closeBookFormBtn.addEventListener('click', closeRemoveBookForm)
 // =======================================End of Event listeners=============================================
 // =======================================Functions=======================================================
 
@@ -88,33 +98,48 @@ function submitForm(e) {
     myLabrary.push(newBook);
     saveBookToLocal(bookTitle.value);
     // displayData();
-    remoFromLocal();
+    // remoFromLocal();
     form.reset();
 }
 
 // ===================================Save data to local storage ==============================
 function saveBookToLocal() {
-    const key = document.querySelector('#key').value;
+    const key = bookTitle.value.toLowerCase();
     localStorage.setItem(key, JSON.stringify(myLabrary));
+    location.reload();
     
 }
 
 
 
-function removeBook(e) {
+function removeBookForm(e) {
     // e.target.parentNode.parentNode.remove();
-    console.log(e.target.parentNode)
-    const key = document.querySelector('#key').value;
-    localStorage.removeItem(key);
-    
-
+    removeBookFormDiv.style.display = 'block'
 }
+
+function closeRemoveBookForm() {
+    removeBookFormDiv.style.display = 'none'
+}
+
+function removeBookFromLocal() {
+    let key = removeKey.value.toLowerCase();
+    if(key){
+        localStorage.removeItem(key);
+        removeBookFormDiv.style.display = 'none';
+        location.reload();
+    }else{
+        const error = document.createElement('h3');
+        error.textContent = "Please enter the book name to reamove";
+        error.style.color = 'red';
+        removeBookInnerForm.insertBefore(error, removeBookBtn);
+    }
+}
+
 
 //============Function to get infomation from local storage and load it to 
 // ===============the UI
 function getBookFromLocal() {
     for(key in localStorage){
-        // const key = document.querySelector('#test-key').value;
         const dataFromLocal = JSON.parse(localStorage.getItem(key));
         if(dataFromLocal){
             dataFromLocal.forEach(book => {
@@ -142,8 +167,9 @@ function getBookFromLocal() {
              removBtn.type = "submit";
              removBtn.setAttribute('id', 'remove-btn');
              removBtn.classList.add('remove-btn');
+             removBtn.key = book.title;
              removBtn.textContent = "Remove book";
-             removBtn.addEventListener('click', removeBook);
+             removBtn.addEventListener('click', removeBookForm);
      
              // Append children to first div
              titleDiv.appendChild(titleH2);
@@ -162,15 +188,11 @@ function getBookFromLocal() {
              displayBookBoard.prepend(bookDiv);
             });
     }
-    
-    
+   
     }
+
 }
 
-function remoFromLocal() {
-        const key = document.querySelector('#key').value;
-        console.log(localStorage.removeItem(key));
-}
 
 getBookFromLocal()
 

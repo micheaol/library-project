@@ -707,4 +707,22 @@ form .read-div{
         width: 84vw;
         
     }
+    #remove-book-form {
+        margin-top: 30%;
+        width: 85vw;
+   
+    }
+    
+    #remove-book-form .remove-book-form {
+        margin-left: 7%;
+    }
+
+    #remove-book-btn {
+        width: 35vw;
+    }
+    
+    #close-book-btn {
+        width: 25vw;
+    
+    }
    }
