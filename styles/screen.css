@@ -1,100 +1,27 @@
+@media screen and (min-width: 660px) {
+  .add-book {
+    width: 10%;
+  }
 
- 
-   @media screen and (min-width: 960px) {
-    form input{
-        width: fit-content;
-        padding: 15px;
-        font-family: 'Roboto', sans-serif;
-        border-radius: 10px;
-    }
-    form .read-div{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 84vw;
-        
-    }
-    #remove-book-form {
-        margin-top: 30%;
-        width: 85vw;
-   
-    }
-    
-    #remove-book-form .remove-book-form {
-        margin-left: 7%;
-    }
+  .book {
+    background-color: cornsilk;
+    width: 35%;
+    margin-left: 30%;
+    height: 5%;
+}
 
-    #remove-book-btn {
-        width: 35vw;
-    }
-    
-    #close-book-btn {
-        width: 25vw;
-    
-    }
+form {
+    width: 45%;
+    height: 85%;
+}
 
-    .menu-items #sign-up{
-        display: none;
-    }
-   }
-
-   @media screen and (min-width: 1142px) {
-    /* ================Styling for each book added to the library======================= */
-   /* .book #book-detail-div button{
-       padding: 2px;
-       margin-left: 20px;
-       width: 8vw;
-       border-radius: 10px;
-       border: none;
-       font-family: 'Roboto', sans-serif;
-       background-color: #bf72a0;
-       font-size: 14px;
-       font-weight: bold;
-       cursor: pointer;
-       margin-bottom: 20px;
-   } */
-   /* ================Styling for each book added to the library======================= */
-   /* .book #book-title p{
-       margin: 5px;
-       margin-top: 2px;
-   } */
-   /* .book #book-title{
-       width: 20vw;
-       background-color: darkblue;
-       border-radius: 8px;
-       padding: 10px;
-       font-family: 'Noto Sans JP', sans-serif;
-       font-size: 14px;
-      
-   } */
-   /* .book #book-detail-div{
-       border-radius: 8px;
-       padding: 3px;
-       background-color: cornsilk;
-       padding-right: 25px;
-       font-family: 'Noto Sans JP', sans-serif;
-       
-   } */
-   
-   
-   /* ==================styling for form ===============*/
-   /* form{
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-       align-content: center;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-       background-color: #c9b8c2;
-       margin-top: 70px;
-       width: 35vw;
-       height: 75vh;
-       padding: 20px;
-       border-radius: 10px;
-       font-family: 'Roboto', sans-serif;
-       margin-bottom: 30px;
-   } */
-   /* ================== End styling for form ===============*/
-   
-   }
-   
+#remove-book-form {
+    margin-top: 15%;
+    width: 35%;
+    margin-left: 30%;
+}
+#remove-book-btn {
+    width: 45%;
+    margin-left: 10%;
+}
+}

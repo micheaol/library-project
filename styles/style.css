@@ -114,7 +114,7 @@ form .read-div{
 
 #remove-book-btn {
     padding: 15px;
-    width: 18vw;
+    width: 40%;
     border-radius: 10px;
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -122,12 +122,12 @@ form .read-div{
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 8%;
+    margin-left: 13%;
 }
 
 #close-book-btn {
     padding: 15px;
-    width: 13vw;
+    width: 40%;
     border-radius: 10px;
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -158,7 +158,7 @@ form{
     margin-left: auto;
     margin-right: auto;
     /* background-color: #be6e9e; */
-    background-color: #b8c9c5;
+    background-color: #d3afc5;
     margin-top: 70px;
     width: 85%;
     height: 80%;
@@ -176,9 +176,9 @@ form{
     margin-left: auto;
     margin-right: auto;
     background-color: #c9b8c2;
-    margin-top: 10%;
-    width: 40vw;
-    height: 35vh;
+    margin-top: 25%;
+    width: 95%;
+    height: 40%;
     padding: 20px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
