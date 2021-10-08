@@ -26,12 +26,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 #logo p{
     margin-top: 0px;
-    margin-left: 5px;
-padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 #logo img{
     width: 7vw;
@@ -41,6 +40,7 @@ padding-bottom: 10px;
     margin-top: 3px;
 }
 .menu-items{
+    display: none;
     margin-right: 25px;
     margin-top: 25px;
     
@@ -52,16 +52,23 @@ padding-bottom: 10px;
     font-size: 20px;
     color: beige;
 }
+
+.add-book {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 20%;
+    margin-right: 3%;
+}
 .add-book img{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5vw;
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 60%;
 }
 
 form input{
-    width: 30vw;
-    padding: 15px;
+    width: 100%;
+    padding: 5%;
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
 }
@@ -74,14 +81,12 @@ form .form-items{
 form .read-div{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 44vw;
+    width: 100%;
     
 }
 .display-books{
-    display: block;
-    margin: auto;
-    width: 80vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     background-color: #d7a7c4;
 }
 
@@ -94,8 +99,8 @@ form .read-div{
 }
 /*=================== Styling for form button and cancel button=================== */
 .buttons-div button, #cancel-btn{
-    padding: 15px;
-    width: 13vw;
+    padding: 10%;
+    width: 90%;
     border-radius: 10px;
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -103,7 +108,33 @@ form .read-div{
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 5%;
     
+}
+
+#remove-book-btn {
+    padding: 15px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bf72a0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 13%;
+}
+
+#close-book-btn {
+    padding: 15px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bf72a0;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
 /*=================== End of Styling for form buttons =================== */
 form h1{
@@ -127,13 +158,34 @@ form{
     margin-left: auto;
     margin-right: auto;
     /* background-color: #be6e9e; */
-    background-color: #c9b8c2;
+    background-color: #d3afc5;
     margin-top: 70px;
-    width: 35vw;
-    height: 65vh;
+    width: 85%;
+    height: 80%;
     padding: 20px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+#remove-book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c9b8c2;
+    margin-top: 25%;
+    width: 95%;
+    height: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#remove-book-form .remove-book-form {
+    margin-left: 8%;
 }
 /* ================== End styling for form ===============*/
 
@@ -152,26 +204,38 @@ form{
     padding-top: 60px;
     
 }
+
+#remove-form-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
 /* ================== End of styling for hide and display form when clicked ===============*/
 
 .book{
     background-color: cornsilk;
-    display: block;
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    height: 15vh;
+    width: 90%;
+    margin-top: 5%;
+    height: 10%;
     border-radius: 8px;
     box-shadow: 10px 10px 5px grey;
     display: flex;
     justify-content: space-between;
+    margin-left: 5%;
 }
 .book #book-title{
-    width: 20vw;
+    width: 50%;
     background-color: darkblue;
     border-radius: 8px;
-    padding: 15px;
+    padding: 5%;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
    
@@ -180,11 +244,12 @@ form{
     margin: 5px;
     margin-top: 5px;
 }
+
 .book #book-detail-div{
     border-radius: 8px;
     padding: 10px;
     background-color: cornsilk;
-    padding-right: 25px;
+    padding-right: 5%;
     font-family: 'Noto Sans JP', sans-serif;
     
 }
@@ -193,13 +258,13 @@ form{
 }
 /* ================Styling for each book added to the library======================= */
 .book #book-detail-div button{
-    padding: 5px;
-    margin-left: 20px;
-    width: 8vw;
+    padding: 5%;
+    margin-left: 5%;
+    width: 65%;
     border-radius: 10px;
     border: none;
     font-family: 'Roboto', sans-serif;
-    background-color: #bf72a0;
+    background-color: #9caf2f;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
