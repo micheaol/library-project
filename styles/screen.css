@@ -1,702 +1,8 @@
-@media screen and (max-width: 1142px) {
- /* ================Styling for each book added to the library======================= */
-.book #book-detail-div button{
-    padding: 2px;
-    margin-left: 20px;
-    width: 8vw;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    background-color: #bf72a0;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-/* ================Styling for each book added to the library======================= */
-.book #book-title p{
-    margin: 5px;
-    margin-top: 2px;
-}
-.book #book-title{
-    width: 20vw;
-    background-color: darkblue;
-    border-radius: 8px;
-    padding: 10px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 14px;
-   
-}
-.book #book-detail-div{
-    border-radius: 8px;
-    padding: 3px;
-    background-color: cornsilk;
-    padding-right: 25px;
-    font-family: 'Noto Sans JP', sans-serif;
-    
-}
 
-
-/* ==================styling for form ===============*/
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #c9b8c2;
-    margin-top: 70px;
-    width: 35vw;
-    height: 75vh;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
-}
-/* ================== End styling for form ===============*/
-
-}
-
-@media screen and (max-width: 1096px) {
-    /* ================Styling for each book added to the library======================= */
-   .book #book-detail-div button{
-       padding: 2px;
-       margin-left: 20px;
-       width: 8vw;
-       border-radius: 10px;
-       border: none;
-       font-family: 'Roboto', sans-serif;
-       background-color: #bf72a0;
-       font-size: 12px;
-       font-weight: bold;
-       cursor: pointer;
-       margin-bottom: 20px;
-   }
-   /* ================Styling for each book added to the library======================= */
-   .book #book-title p{
-       margin: 5px;
-       margin-top: 2px;
-   }
-   .book #book-title{
-       width: 20vw;
-       background-color: darkblue;
-       border-radius: 8px;
-       padding: 10px;
-       font-family: 'Noto Sans JP', sans-serif;
-       font-size: 14px;
-      
-   }
-   .book #book-detail-div{
-       border-radius: 8px;
-       padding: 3px;
-       background-color: cornsilk;
-       padding-right: 25px;
-       font-family: 'Noto Sans JP', sans-serif;
-       
-   }
-   }
-
-   @media screen and (max-width: 997px) {
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 15px;
-        
-    }
-    /* ==================styling for form ===============*/
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #c9b8c2;
-    margin-top: 70px;
-    width: 40vw;
-    height: 75vh;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
-}
-/* ================== End styling for form ===============*/
-   }
-
-   @media screen and (max-width: 948px) {
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 13px;
-        
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 10vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-title{
-        width: 20vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-   }
-
-   @media screen and (max-width: 846px) {
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-        
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 10vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-title{
-        width: 20vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-        /* ==================styling for form ===============*/
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #c9b8c2;
-    margin-top: 70px;
-    width: 45vw;
-    height: 75vh;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
-}
-form input{
-    width: 35vw;
-    padding: 15px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-}
-form .read-div{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 50vw;
-    
-}
-.buttons-div button, #cancel-btn{
-    padding: 10px;
-    width: 15vw;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    background-color: #bf72a0;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    
-}
-
-}
-   @media screen and (max-width: 795px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 49vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 13px;
-        
-    }
-   }
-
-   @media screen and (max-width: 795px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 51vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 13px;
-        
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 12vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-   }
-
-   @media screen and (max-width: 632px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 55vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 13vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-   
-   }
-
-   @media screen and (max-width: 621px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 65vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 13vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-title{
-        width: 30vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-   
-   }
-   @media screen and (max-width: 583px) {
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 15vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-title{
-        width: 30vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-    .add-book img{
-        margin-top: 20px;
-        margin-left: 65px;
-        margin-right: auto;
-        width: 8vw;
-    }
-    .add-book p{
-        margin-left: 45px;
-    }
-    .buttons-div button, #cancel-btn{
-        padding: 10px;
-        width: 15vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 10.5px;
-        font-weight: bold;
-        cursor: pointer;
-        
-    }
-    form .read-div{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 52vw;
-    }
-    
-   
-   }
-
-   @media screen and (max-width: 505px) {
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 17vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-title{
-        width: 30vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-    .add-book img{
-        margin-top: 20px;
-        margin-left: 65px;
-        margin-right: auto;
-        width: 8vw;
-    }
-    .add-book p{
-        margin-left: 45px;
-    }
-
-   
-   }
-   
-   @media screen and (max-width: 483px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 68vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-  
-    .buttons-div button, #cancel-btn{
-        padding: 10px;
-        width: 10vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 11px;
-        font-weight: bold;
-        cursor: pointer;
-        
-    }
  
-   
-   }
-   @media screen and (max-width: 446px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 75vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 20vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .menu-items #sign-up{
-        display: none;
-    }
-   
-   }
-
-   @media screen and (max-width: 414px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 85vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .menu-items #sign-up{
-        display: none;
-    }
-    .book #book-title{
-        width: 38vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-   }
-
-   @media screen and (max-width: 379px) {
-    .book{
-        background-color: cornsilk;
-        display: block;
-        width: 85vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-        height: 15vh;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px grey;
-        display: flex;
-        justify-content: space-between;
-    }
-    .menu-items #sign-up{
-        display: none;
-    }
-    .book #book-title{
-        width: 38vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 23vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .buttons-div button, #cancel-btn{
-        padding: 10px;
-        width: 30vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 10.5px;
-        font-weight: bold;
-        cursor: pointer;
-        
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        /* background-color: #be6e9e; */
-        background-color: #c9b8c2;
-        margin-top: 70px;
-        width: 85vw;
-        height: 85vh;
-        padding: 20px;
-        border-radius: 10px;
-        font-family: 'Roboto', sans-serif;
-    }
+   @media screen and (min-width: 960px) {
     form input{
-        width: 65vw;
-        padding: 15px;
-        font-family: 'Roboto', sans-serif;
-        border-radius: 10px;
-    }
-    form .read-div{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 84vw;
-        
-    }
-   }
-   @media screen and (max-width: 360px) {
-    .menu-items #sign-up{
-        display: none;
-    }
-    .book #book-title{
-        width: 38vw;
-        background-color: darkblue;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-       
-    }
-    .book #book-detail-div button{
-        padding: 2px;
-        margin-left: 20px;
-        width: 25vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-bottom: 20px;
-    }
-    .book #book-detail-div{
-        border-radius: 8px;
-        padding: 3px;
-        background-color: cornsilk;
-        padding-right: 25px;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 12px;
-        
-    }
-    .buttons-div button, #cancel-btn{
-        padding: 10px;
-        width: 30vw;
-        border-radius: 10px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        background-color: #bf72a0;
-        font-size: 10.5px;
-        font-weight: bold;
-        cursor: pointer;
-        
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        /* background-color: #be6e9e; */
-        background-color: #c9b8c2;
-        margin-top: 70px;
-        width: 85vw;
-        height: 85vh;
-        padding: 20px;
-        border-radius: 10px;
-        font-family: 'Roboto', sans-serif;
-    }
-    form input{
-        width: 65vw;
+        width: fit-content;
         padding: 15px;
         font-family: 'Roboto', sans-serif;
         border-radius: 10px;
@@ -725,4 +31,70 @@ form .read-div{
         width: 25vw;
     
     }
+
+    .menu-items #sign-up{
+        display: none;
+    }
    }
+
+   @media screen and (min-width: 1142px) {
+    /* ================Styling for each book added to the library======================= */
+   /* .book #book-detail-div button{
+       padding: 2px;
+       margin-left: 20px;
+       width: 8vw;
+       border-radius: 10px;
+       border: none;
+       font-family: 'Roboto', sans-serif;
+       background-color: #bf72a0;
+       font-size: 14px;
+       font-weight: bold;
+       cursor: pointer;
+       margin-bottom: 20px;
+   } */
+   /* ================Styling for each book added to the library======================= */
+   /* .book #book-title p{
+       margin: 5px;
+       margin-top: 2px;
+   } */
+   /* .book #book-title{
+       width: 20vw;
+       background-color: darkblue;
+       border-radius: 8px;
+       padding: 10px;
+       font-family: 'Noto Sans JP', sans-serif;
+       font-size: 14px;
+      
+   } */
+   /* .book #book-detail-div{
+       border-radius: 8px;
+       padding: 3px;
+       background-color: cornsilk;
+       padding-right: 25px;
+       font-family: 'Noto Sans JP', sans-serif;
+       
+   } */
+   
+   
+   /* ==================styling for form ===============*/
+   /* form{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-content: center;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       background-color: #c9b8c2;
+       margin-top: 70px;
+       width: 35vw;
+       height: 75vh;
+       padding: 20px;
+       border-radius: 10px;
+       font-family: 'Roboto', sans-serif;
+       margin-bottom: 30px;
+   } */
+   /* ================== End styling for form ===============*/
+   
+   }
+   
